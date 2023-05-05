@@ -4,19 +4,19 @@
 function renderLicenseBadge(license) {
 
   if (license === 'MIT license') {
-    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]`
+    return `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
   } else if (license === 'GNU GPLv2') {
-    return `[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)]`
+    return `![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)`
   } else if (license === 'GNU GPLv3') {
-    return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]`
+    return `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`
   } else if (license === 'Apache License 2.0') {
-    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`
+    return `![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`
   } else if (license === 'BSD 2-Clause License') {
-    return `[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)]`
+    return `![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)`
   } else if (license === 'ISC License (ISC)') {
-    return `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)]`
+    return `![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)`
   } else {
-    return `https://img.shields.io/badge/License--.svg`
+    return ''
   }
 
 }
@@ -45,7 +45,7 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  return ` ## License\n ${license}`
+  return ` ## License\n\t${license}`
 }
 
 // TODO: Create a function to generate markdown for README
@@ -55,25 +55,31 @@ function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(data.license)
   const licenseLink = renderLicenseLink(data.license)
 
-  return `# ${data.title}
+  return `# \t${data.title}
+
     ${licenseBadge}
-  ## Description\n ${data.description} 
-  ## Table of COntent\n ${data.tableOfContent} 
-  ## Installation\n ${data.installation} 
-  ## Usage\n${data.usage} 
-  ## Credit\n${data.credit}
+
+  ## Description\n\t${data.description} 
+
+  ## Table of COntent\n\t${data.tableOfContent}
+
+  ## Installation\n\t${data.installation} 
+
+  ## Usage\n\t${data.usage} 
+
+  ## Credit\n\t${data.credit}
  
   ${licenseSection}
   ${licenseLink}
 
   ## Contributing\n ${data.contributing}
-  ## Tests\n${data.tests}
+
+  ## Tests\n\t${data.tests}
+
   ## ${`Questions`}
-  ### GitHub Username\n${`https://github.com/`}${data.github}
-  ### Email\n${data.email}
-
+  ### GitHub Username\n\t${`https://github.com/`}${data.github}
+  ### Email\n\t${data.email}
  `;
-
 }
 
 

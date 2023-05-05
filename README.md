@@ -1,34 +1,41 @@
-# The README generator
-    [![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)]
+# 	sldkjflskdjflasjd
+
+    ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
   ## Description
- This is a dynamic readme file generator app. 
+	sdlkfja;lsdkfj 
+
   ## Table of COntent
- Installation,
-Usage,
-Credits,
-License,
-How to Contribute,
-Tests,
-Questions 
+		Installation
+,	Usage
+,	Credits
+,	License
+,	How to Contribute
+,	Tests
+,	Questions
+
   ## Installation
- No special steps required to install this app 
+	sldkfj;sldfj 
+
   ## Usage
-I will teach you how to use my special app 
+	sldkjflsjd 
+
   ## Credit
-I appreciate your collaborartion
+	dslkfjlsdjf
  
    ## License
- BSD 2-Clause License
-  [Follow the link for additional information on the BSD 2-Clause License coverage](https://opensource.org/licenses/BSD-2-Clause)
+	MIT license
+  [Follow the link for additional information on the MIT license coverage](https://opensource.org/licenses/MIT)
 
   ## Contributing
- To contribute to this app development you need to call me 
+ lsdkjf;lskdj
+
   ## Tests
-no test required at this moment
+	sdlkfj;sldjf
+
   ## Questions
   ### GitHub Username
-https://github.com/nafbek
+	https://github.com/sldufosdlkj
   ### Email
-myemail.com
-
+	sleiudflm
  

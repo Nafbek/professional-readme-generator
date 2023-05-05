@@ -24,13 +24,13 @@ const questions = [
         message: 'Add contents you would like to include in the Table of Content.',
         name: 'tableOfContent',
         choices: [
-            'Installation',
-            '\nUsage',
-            '\nCredits',
-            '\nLicense',
-            '\nHow to Contribute',
-            '\nTests',
-            '\nQuestions',
+            '\tInstallation\n',
+            '\tUsage\n',
+            '\tCredits\n',
+            '\tLicense\n',
+            '\tHow to Contribute\n',
+            '\tTests\n',
+            '\tQuestions',
         ]
     },
     {
