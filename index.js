@@ -24,15 +24,13 @@ const questions = [
         message: 'Add contents you would like to include in the Table of Content.',
         name: 'tableOfContent',
         choices: [
-            'Title of the Project',
-            'Description',
             'Installation',
-            'Usage',
-            'Credits',
-            'License',
-            'How to Contribute',
-            'Tests',
-            'Questions',
+            '\nUsage',
+            '\nCredits',
+            '\nLicense',
+            '\nHow to Contribute',
+            '\nTests',
+            '\nQuestions',
         ]
     },
     {
@@ -46,6 +44,11 @@ const questions = [
         name: 'usage'
     },
     {
+        type: 'input',
+        message: 'Give acknowledgement to your collaborators.',
+        name: 'credit'
+    },
+    {
         type: 'list',
         message: 'Choose the license your app is covered under.',
         name: 'license',
@@ -54,7 +57,8 @@ const questions = [
             'Apache License 2.0',
             'GNU GPLv3',
             'GNU GPLv2',
-            'ISC License',
+            'BSD 2-Clause License',
+            'ISC License (ISC)',
             'No License'
         ]
     },
@@ -90,7 +94,7 @@ const questions = [
 function writeToFile(fileName, data) {
     // fs.writeFile(fileName, data)
 
-    fs.writeFile(fileName, data, (error) => {
+    fs.writeFile(fileName, data,  (error) => {
         error? console.log(error): console.log('success')
     })
    
@@ -102,7 +106,8 @@ function init() {
     inquirer.prompt(questions)
         .then((data) => {
             //it should be something README not the title? but how can i do??
-const fileName = `${data.title}.md`
+            const fileName = `README.md`
+// const fileName = `${data.title}.md`
             writeToFile(fileName, generateMarkdown(data))
         })
         .catch((err) => {
@@ -112,3 +117,4 @@ const fileName = `${data.title}.md`
 
 // Function call to initialize app
 init();
+
