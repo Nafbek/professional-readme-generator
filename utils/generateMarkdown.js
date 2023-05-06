@@ -1,63 +1,59 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-
+// Returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
-
-  if (license === 'MIT license') {
-   return '![License: MIT license](https://img.shields.io/badge/License-MIT-yellow.svg)'
+  if (license === 'MIT') {
+    return '![License: MIT license](https://img.shields.io/badge/License-MIT-yellow.svg)'
   } else if (license === 'GNU GPLv2') {
     return '![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)'
   } else if (license === 'GNU GPLv3') {
     return '![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)'
   } else if (license === 'Apache License 2.0') {
     return '![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)'
-  } else if (license === 'BSD 2-Clause License') {
-    return !'[License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)'
-  } else if (license === 'ISC License (ISC)') {
+  } else if (license === 'BSD 2-Clause') {
+    return '![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)'
+  } else if (license === 'ISC (ISC)') {
     return '![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)'
   } else {
     return ''
   }
 
 }
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
 
+//A function that returns the license link
 function renderLicenseLink(license) {
-
-  if (license === 'MIT license') {
-    return '[Follow the link for additional information on the MIT license coverage](https://opensource.org/licenses/MIT)'
+  if (license === 'MIT') {
+    return '[MIT license](https://opensource.org/licenses/MIT)'
   } else if (license === 'GNU GPLv2') {
-    return '[Follow the link for additional information on the GNU GPLv2 coverage](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)'
+    return '[GNU GPLv2 License](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)'
   } else if (license === 'GNU GPLv3') {
-    return '[Follow the link for additional information on the GNU GPLv3 coverage](https://www.gnu.org/licenses/gpl-3.0)'
+    return '[GNU GPLv3 License](https://www.gnu.org/licenses/gpl-3.0)'
   } else if (license === 'Apache License 2.0') {
-    return '[Follow the link for additional information on the Apache License 2.0 coverage](https://opensource.org/licenses/Apache-2.0)'
-  } else if (license === 'BSD 2-Clause License') {
-    return '[Follow the link for additional information on the BSD 2-Clause License coverage](https://opensource.org/licenses/BSD-2-Clause)'
-  } else if (license === 'ISC License (ISC)') {
-    return '[Follow the link for additional information on the ISC License (ISC) coverage](https://opensource.org/licenses/ISC)'
+    return '[Apache License 2.0](https://opensource.org/licenses/Apache-2.0)'
+  } else if (license === 'BSD 2-Clause') {
+    return '[BSD 2-Clause License](https://opensource.org/licenses/BSD-2-Clause)'
+  } else if (license === 'ISC (ISC)') {
+    return '[ISC (ISC) License](https://opensource.org/licenses/ISC)'
   } else {
     return ''
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+//A function that returns the license section of README
 function renderLicenseSection(license) {
-  return ` ## License\n\t${license}`
+  return ` ## License
+  This application is covered under the terms of the ${license}.`
 }
 
-// TODO: Create a function to generate markdown for README
+//Generate a markdown for README
 function generateMarkdown(data) {
 
   const licenseSection = renderLicenseSection(data.license)
   const licenseBadge = renderLicenseBadge(data.license)
   const licenseLink = renderLicenseLink(data.license)
 
-  return `# ${data.title}
-
-  ${licenseBadge}
+  //Return a data to write the file
+  return `${licenseBadge}
+  
+  # ${data.title} 
 
   ## Description
   ${data.description} 
@@ -75,13 +71,15 @@ function generateMarkdown(data) {
   ${data.installation} 
 
   ## Usage
-  ${data.usage} 
+  ${data.usage}
+  You can also follow the syntax below to view a walkthrough video that demonsatrates the functionality of the application.
+  ![demo](https://...............)
 
   ## Credit
   ${data.credit}
  
   ${licenseSection}
-  ${licenseLink}
+  Follow this link ${licenseLink} for additional information on the license coverage.
 
   ## Contributing
   ${data.contributing}
@@ -90,7 +88,8 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions
-  
+  If you have any questions about this project, please use the following contact address.
+
   ### GitHub Username
   ${`https://github.com/`}${data.github}
 

@@ -1,9 +1,9 @@
-# slkdjf
-
-  ![License: MIT license](https://img.shields.io/badge/License-MIT-yellow.svg)
+![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)
+  
+  # lasiudf;aousd; 
 
   ## Description
-  sldkjf 
+  as;ldfja;sdlj 
 
   ## Table of COntent
   - [Installation](#Installation)
@@ -15,29 +15,30 @@
   - [Questions](#Questions)
 
   ## Installation
-  sldkfj'a 
+  asldfj;alsdjf 
 
   ## Usage
-  saldkjf 
+  s'dlsjldfja 
 
   ## Credit
-  sldkj
+  sldkfja;lsud
  
    ## License
-	MIT license
-  [Follow the link for additional information on the MIT license coverage](https://opensource.org/licenses/MIT)
+  This application is covered under the terms of the BSD 2-Clause.
+  Follow this link [BSD 2-Clause License](https://opensource.org/licenses/BSD-2-Clause) for additional information on the license coverage.
 
   ## Contributing
-  sdlkjf
+  sdlkjf;asud;
 
   ## Tests
-  sdlkjf'a
+  asldfkjadsjf
 
   ## Questions
-  
+  If you have any questions about this project, please use the following contact address.
+
   ### GitHub Username
-  https://github.com/asldkfj
+  https://github.com/asdlfja;sjd
 
   ### Email
-  wlesd
+  sldkfja
  

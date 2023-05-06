@@ -35,12 +35,12 @@ const questions = [
         message: 'Choose the license your app is covered under.',
         name: 'license',
         choices: [
-            'MIT license',
+            'MIT',
             'Apache License 2.0',
             'GNU GPLv3',
             'GNU GPLv2',
-            'BSD 2-Clause License',
-            'ISC License (ISC)',
+            'BSD 2-Clause',
+            'ISC (ISC)',
             'No License'
         ]
     },
