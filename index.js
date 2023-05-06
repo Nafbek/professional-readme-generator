@@ -1,13 +1,9 @@
-// TODO: Include packages needed for this application
-
+//Packages needed for the application
 const fs = require('fs')
-
 const inquirer = require('inquirer')
-
 const generateMarkdown = require('./utils/generateMarkdown');
 
-
-// TODO: Create an array of questions for user input
+//A array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -18,20 +14,6 @@ const questions = [
         type: 'input',
         message: 'Write a short desciption of the app?',
         name: 'description'
-    },
-    {
-        type: 'checkbox',
-        message: 'Add contents you would like to include in the Table of Content.',
-        name: 'tableOfContent',
-        choices: [
-            '\tInstallation\n',
-            '\tUsage\n',
-            '\tCredits\n',
-            '\tLicense\n',
-            '\tHow to Contribute\n',
-            '\tTests\n',
-            '\tQuestions',
-        ]
     },
     {
         type: 'input',
@@ -83,38 +65,25 @@ const questions = [
         message: 'Write your email.',
         name: 'email'
     }
-
-
 ];
 
-
-
-// TODO: Create a function to write README file
-
+//Write a data to the README file
 function writeToFile(fileName, data) {
-    // fs.writeFile(fileName, data)
-
-    fs.writeFile(fileName, data,  (error) => {
-        error? console.log(error): console.log('success')
+     fs.writeFile(fileName, generateMarkdown(data),  (error) => {
+        error? console.log(error): console.log('README file has been generated!')
     })
-   
-
  }
 
-// TODO: Create a function to initialize app
+// Initialize app
 function init() {
     inquirer.prompt(questions)
-        .then((data) => {
-            //it should be something README not the title? but how can i do??
-            const fileName = `README.md`
-// const fileName = `${data.title}.md`
-            writeToFile(fileName, generateMarkdown(data))
+        .then((data) => {   
+            writeToFile(`README.md`, data)
         })
         .catch((err) => {
             console.log(`Error: ${err}`)
         })
 }
 
-// Function call to initialize app
 init();
 
