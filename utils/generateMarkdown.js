@@ -9,7 +9,7 @@ function renderLicenseBadge(license) {
   } else if (license === 'Apache License 2.0') {
     return '![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)'
   } else if (license === 'BSD 2-Clause') {
-    return '![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)'
+    return '![License: BSD 2-Clause](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)'
   } else if (license === 'ISC (ISC)') {
     return '![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)'
   } else {
@@ -21,17 +21,17 @@ function renderLicenseBadge(license) {
 //A function that returns the license link
 function renderLicenseLink(license) {
   if (license === 'MIT') {
-    return '[MIT license](https://opensource.org/licenses/MIT)'
+    return '(https://opensource.org/licenses/MIT)'
   } else if (license === 'GNU GPLv2') {
-    return '[GNU GPLv2 License](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)'
+    return '(https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)'
   } else if (license === 'GNU GPLv3') {
-    return '[GNU GPLv3 License](https://www.gnu.org/licenses/gpl-3.0)'
+    return '(https://www.gnu.org/licenses/gpl-3.0)'
   } else if (license === 'Apache License 2.0') {
-    return '[Apache License 2.0](https://opensource.org/licenses/Apache-2.0)'
+    return '(https://opensource.org/licenses/Apache-2.0)'
   } else if (license === 'BSD 2-Clause') {
-    return '[BSD 2-Clause License](https://opensource.org/licenses/BSD-2-Clause)'
+    return '(https://opensource.org/licenses/BSD-2-Clause)'
   } else if (license === 'ISC (ISC)') {
-    return '[ISC (ISC) License](https://opensource.org/licenses/ISC)'
+    return '(https://opensource.org/licenses/ISC)'
   } else {
     return ''
   }
@@ -72,14 +72,16 @@ function generateMarkdown(data) {
 
   ## Usage
   ${data.usage}
-  You can also follow the syntax below to view a walkthrough video that demonsatrates the functionality of the application.
-  ![demo](https://...............)
+  
+  \nYou can also follow the syntax below to view a walkthrough video that demonsatrates the functionality of the application.\n
+  ![Demo Video] (https://drive.google.com/file/d/16r1lA2AlzTaZA_1TcSfpmWqKV_6NLaIl/view) 
+  
 
   ## Credit
   ${data.credit}
  
   ${licenseSection}
-  Follow this link ${licenseLink} for additional information on the license coverage.
+  Please refer to ${licenseLink} for additional information on the license coverage.
 
   ## Contributing
   ${data.contributing}
@@ -88,7 +90,7 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions
-  If you have any questions about this project, please use the following contact address.
+  If you have any questions about this project, please contact the author at the following contact address:
 
   ### GitHub Username
   ${`https://github.com/`}${data.github}
